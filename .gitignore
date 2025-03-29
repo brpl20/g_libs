@@ -1,0 +1,75 @@
+# Virtual Environment
+venv/
+.env
+bin/
+lib/
+pyvenv.cfg
+include/
+share/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Secrets and Credentials
+# Don't block all JSON files, only sensitive ones
+credentials.json
+client_secret*.json
+token*.json
+*_secret*.json
+*_key*.json
+*_credentials*.json
+
+# Config files that might contain sensitive info
+*_config.json
+gcal_config.json
+youtube_ai_config.json
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Aider
+.aider
+*.aider
+
+# Project specific
+auth-test.py
