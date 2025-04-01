@@ -200,3 +200,42 @@
 
 # 2025-03-29 14:10:44.709318
 +please check in the git history if there is any commit of secrets and remove them all before i commit to github 
+
+# 2025-04-01 06:24:28.000357
++i got an issue, in april I have "@PRJ calc prev" and it's not apearing in the list, i also have @FAM evolua_consultoria and other fields that are not working.... They are unique fields, they are not recurring..and also have "@MKT conteudo_semana" which is recurring and it's not working. are you sure you are getting all the fields that have the pattern ? "@[A-Z][A-Z][A-Z]
+
+# 2025-04-01 06:24:45.158108
++A
+
+# 2025-04-01 06:26:04.319367
++no
+
+# 2025-04-01 06:26:51.559866
++no, it didn't work.... make share that even in the recurring events if there is only one in month it can be on the list, we just need that the pattern is match: check the results i got not: SUMMARY OF RECURRING EVENTS:
++--------------------------------------------------------------------------------
++Event                                              Occurrences  Total Time     
++--------------------------------------------------------------------------------
++@MKT conteudo_semana                               4            8.0 hours      
++@MKT revisao semana seguinte                       4            2.0 hours      
++--------------------------------------------------------------------------------
++Total events: 145
++Total time: 6.8 days (164.2 hours)
++================================================================================
++
+
+# 2025-04-01 06:27:35.231687
++no
+
+# 2025-04-01 06:27:44.920349
++you got it wrong, now nothing appears! SUMMARY OF RECURRING EVENTS:
++--------------------------------------------------------------------------------
++Event                                              Occurrences  Total Time     
++--------------------------------------------------------------------------------
++--------------------------------------------------------------------------------
++Total events: 145
++Total time: 6.8 days (164.2 hours)
++================================================================================
++
+
+# 2025-04-01 06:29:23.191045
++no
