@@ -779,11 +779,10 @@ class GoogleCalendarReport:
         
         # Sort by total duration (descending)
         for summary, total_duration in sorted(event_durations.items(), key=lambda x: x[1], reverse=True):
-            # Only show events that occurred multiple times and match our pattern requirements
-            if event_count[summary] > 1:
-                # Skip entries with multiple @ symbols or that don't match the @XXX pattern
-                if summary.count('@') > 1 or not re.match(r'^@[A-Z]{3}[ _].*$', summary):
-                    continue
+            # Show all events that match our pattern requirements
+            # Skip entries with multiple @ symbols or that don't match the @XXX pattern
+            if summary.count('@') > 1 or not re.match(r'^@[A-Z]{3}[ _].*$', summary):
+                continue
                     
                 # Format duration
                 if total_duration < 1:
