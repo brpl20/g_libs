@@ -783,17 +783,17 @@ class GoogleCalendarReport:
             # Skip entries with multiple @ symbols or that don't match the @XXX pattern
             if summary.count('@') > 1 or not re.match(r'^@[A-Z]{3}[ _].*$', summary):
                 continue
-                    
-                # Format duration
-                if total_duration < 1:
-                    duration_str = f"{int(total_duration * 60)} minutes"
-                elif total_duration < 24:
-                    duration_str = f"{total_duration:.1f} hours"
-                else:
-                    days = total_duration / 24
-                    duration_str = f"{days:.1f} days"
                 
-                print(f"{summary[:50]:<50} {event_count[summary]:<12} {duration_str:<15}")
+            # Format duration
+            if total_duration < 1:
+                duration_str = f"{int(total_duration * 60)} minutes"
+            elif total_duration < 24:
+                duration_str = f"{total_duration:.1f} hours"
+            else:
+                days = total_duration / 24
+                duration_str = f"{days:.1f} days"
+            
+            print(f"{summary[:50]:<50} {event_count[summary]:<12} {duration_str:<15}")
         
         print("-" * 80)
         print(f"Total events: {len(events)}")
