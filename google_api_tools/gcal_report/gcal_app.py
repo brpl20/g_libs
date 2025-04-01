@@ -577,8 +577,8 @@ class GoogleCalendarReport:
                 
             summary = event['summary']
             
-            # Check if event follows @XXX pattern (exactly 3 uppercase letters after @)
-            category_match = re.match(r'^@([A-Z]{3})\s+(.*)', summary)
+            # Check if event follows @XXX pattern (3 uppercase letters after @)
+            category_match = re.match(r'^@([A-Z]{3})[ _](.*)', summary)
             if category_match:
                 category = category_match.group(1)
                 subcategory = category_match.group(2)
@@ -781,8 +781,8 @@ class GoogleCalendarReport:
         for summary, total_duration in sorted(event_durations.items(), key=lambda x: x[1], reverse=True):
             # Only show events that occurred multiple times and match our pattern requirements
             if event_count[summary] > 1:
-                # Skip entries with multiple @ symbols or that don't match the exact @XXX pattern
-                if summary.count('@') > 1 or not re.match(r'^@[A-Z]{3}\s+.*$', summary):
+                # Skip entries with multiple @ symbols or that don't match the @XXX pattern
+                if summary.count('@') > 1 or not re.match(r'^@[A-Z]{3}[ _].*$', summary):
                     continue
                     
                 # Format duration
